@@ -1,0 +1,8 @@
+name: Default MAT Array
+cells_per_string: 8
+strings_per_array: 1
+exchange_rate_gbp_per_usd: 0.77
+cell_height_mm: 33.6
+gap_between_cells_mm: 1.0
+positive_end_gap_mm: 5.0
+negative_end_gap_mm: 5.0

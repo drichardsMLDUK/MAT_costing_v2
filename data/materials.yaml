@@ -1,0 +1,203 @@
+Silver Ribbon:
+- id: Silver_2mm
+  name: Silver Ribbon 2mm Width
+  width_mm: 2.0
+  thickness_mm: 0.0254
+  density_g_cm3: 10.49
+  price_per_g: 16.9
+  price_currency: USD
+- id: Silver_1.5mm
+  name: Silver Ribbon 1.5mm Width
+  width_mm: 1.5
+  thickness_mm: 0.0254
+  density_g_cm3: 10.49
+  price_per_g: 16.9
+  price_currency: USD
+- id: Silver_1mm
+  name: Silver Ribbon 1mm Width
+  width_mm: 1.0
+  thickness_mm: 0.0254
+  density_g_cm3: 10.49
+  price_per_g: 17.1
+  price_currency: USD
+Diodes:
+- id: Bypass_Diode
+  name: Bypass Diode
+  unit_cost_usd: null
+  unit_cost_gbp: 1.52
+  currency: GBP
+- id: Blocking_Diode
+  name: Blocking Diode
+  unit_cost_usd: null
+  unit_cost_gbp: 1.81
+  currency: GBP
+Weld heads:
+- id: Weld_Head_Ag
+  name: Silver Weld Head
+  currency: GBP
+  num_welds: 1000
+  unit_cost_gbp: 339.0
+- id: Weld_Head_Au
+  name: Gold Weld Head
+  currency: GBP
+  num_welds: 1000
+  unit_cost_gbp: 339.0
+- id: Weld_Head_Al
+  name: Aluminium Weld Head
+  currency: GBP
+  num_welds: 1000
+  unit_cost_gbp: 339.0
+- id: Weld_Head_BL
+  name: Blocking Diode Weld Head
+  currency: GBP
+  num_welds: 1000
+  unit_cost_gbp: 339.0
+Lamination:
+- id: Top_Sheet
+  name: Teflon FEP
+  roll_length_value: 300.0
+  roll_length_unit: ft
+  roll_currency: GBP
+  roll_cost_gbp: 737.5
+- id: Bottom_Sheet
+  name: Back Sheet
+  roll_length_value: 300.0
+  roll_length_unit: ft
+  roll_currency: GBP
+  roll_cost_gbp: 737.5
+- id: Liner_Log
+  name: Liner
+  roll_length_value: 300.0
+  roll_length_unit: ft
+  roll_currency: GBP
+  roll_cost_gbp: 737.5
+- id: Top_Sheet_Calder
+  name: Teflon FEP Calder
+  roll_length_value: 100.0
+  roll_length_unit: m
+  roll_currency: GBP
+  roll_cost_gbp: 398.65
+  notes: Calder Coatings Lamination
+- id: Bottom_Sheet_Calder
+  name: Back Sheet Calder
+  roll_length_value: 100.0
+  roll_length_unit: m
+  roll_currency: GBP
+  roll_cost_gbp: 91.29
+  notes: Calder Coatings Lamination
+- id: Liner_Log_Calder
+  name: Liner Calder
+  roll_length_value: 100.0
+  roll_length_unit: m
+  roll_currency: GBP
+  roll_cost_gbp: 55.48
+  notes: Calder Coatings Lamination
+Tapes:
+- id: Caplinq
+  name: Capling tape
+  width_mm: 10.0
+  roll_length_value: 32.91
+  roll_length_unit: m
+  roll_currency: GBP
+  roll_cost_gbp: 11.29
+- id: Kapton_PPC213
+  name: Kapton (PPC213)
+  width_mm: 12.0
+  roll_length_value: 33.0
+  roll_length_unit: m
+  roll_currency: GBP
+  roll_cost_gbp: 14.01
+- id: Kapton_PPC221
+  name: Kapton (PPC221)
+  width_mm: 6.0
+  roll_length_value: 33.0
+  roll_length_unit: m
+  roll_currency: GBP
+  roll_cost_gbp: 2.54
+- id: Kapton_PPC222
+  name: Kapton (PPC222)
+  width_mm: 9.0
+  roll_length_value: 33.0
+  roll_length_unit: m
+  roll_currency: GBP
+  roll_cost_gbp: 4.54
+- id: Kapton_PPC223
+  name: Kapton (PPC223)
+  width_mm: 12.0
+  roll_length_value: 33.0
+  roll_length_unit: m
+  roll_currency: GBP
+  roll_cost_gbp: 3.92
+- id: Kapton_PPC224
+  name: Kapton (PPC224)
+  width_mm: 19.0
+  roll_length_value: 33.0
+  roll_length_unit: m
+  roll_currency: GBP
+  roll_cost_gbp: 6.11
+Misc:
+- id: Kapton_Insulation
+  name: Kapton Insulation Tabs
+  type: Kapton
+  currency: USD
+  disks_per_roll: 6700
+  roll_cost_usd: 255.52
+- id: Epoxy_Insulating
+  name: Insulating Epoxy
+  type: Epoxy
+  currency: GBP
+  volume_ml: 41.5
+  total_cost_gbp: 37.74
+- id: Epoxy_Conductive
+  name: Conductive Epoxy
+  type: Epoxy
+  currency: GBP
+  volume_ml: 41.5
+  total_cost_gbp: 37.74
+Packaging:
+- id: 11_String_Frame
+  name: 11 String Frame
+  type: Frame
+  currency: USD
+  unit_cost_usd: 2.3
+- id: 8_String_Frame
+  name: 11 String Frame
+  type: Frame
+  currency: USD
+  unit_cost_usd: 2.3
+- id: 11_String_Board
+  name: 11 String Shipping Board
+  type: Shipping board
+  currency: GBP
+  unit_cost_gbp: 1.85
+- id: 8_String_Board
+  name: 8 String Shipping Board
+  type: Shipping board
+  currency: GBP
+  unit_cost_gbp: 1.85
+- id: Foam_3mm
+  name: Anti Static Foam (3mm)
+  type: Foam
+  thickness_mm: 3.0
+  num_pieces: 30
+  currency: GBP
+  total_cost_gbp: 0.92
+- id: Foam_25mm
+  name: Anti Static Foam (25mm)
+  type: Foam
+  thickness_mm: 25.0
+  num_pieces: 30
+  currency: GBP
+  total_cost_gbp: 3.5
+- id: Box_8"
+  name: 8" Packaging Box
+  type: Box
+  diameter_mm: 203.0
+  currency: GBP
+  unit_cost_gbp: 4.83
+- id: Box_12"
+  name: 12" Packaging Box
+  type: Box
+  diameter_mm: 305.0
+  currency: GBP
+  unit_cost_gbp: 5.63

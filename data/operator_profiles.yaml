@@ -1,0 +1,25 @@
+operators:
+- id: op1
+  name: Jon
+  job_title: Production Support Manager
+  hourly_rate: 20.0
+- id: op2
+  name: Declan
+  job_title: R&D Engineer
+  hourly_rate: 20.0
+- id: op3
+  name: Dave
+  job_title: Senior R&D Engineer
+  hourly_rate: 20.0
+- id: op4
+  name: Paul
+  job_title: Lead R&D Engineer
+  hourly_rate: 20.0
+- id: op5
+  name: 'Jack '
+  job_title: Operations Manager
+  hourly_rate: 20.0
+- id: op6
+  name: Arthur
+  job_title: Project Coordinator
+  hourly_rate: 20.0

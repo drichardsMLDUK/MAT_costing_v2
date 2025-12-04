@@ -1,0 +1,852 @@
+process:
+- id: cells_enter_mat
+  name: Cells enter MAT
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 3.0
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op2
+  machine_time_share: 1.0
+  notes: Logistical step; mostly tracking, not direct labour.
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 20.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_batch
+  time_value: 0.0
+  time_unit: seconds
+  batch_time_value: 1.0
+  batch_time_unit: minutes
+  cells_per_array_for_step: 1.0
+- id: inspect_cells
+  name: Inspect cells (visual)
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 30.0
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op2
+  machine_time_share: 0.0
+  notes: Incoming visual check.
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 30.0
+  time_unit: seconds
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 1.0
+- id: weigh_cells
+  name: Weigh cells
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 20.0
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op2
+  machine_time_share: 0.0
+  notes: Weigh cells individually or in groups.
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 20.0
+  time_unit: seconds
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 1.0
+- id: write_lot_stack_bins
+  name: Write Lot ID and stack in bins
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 10.0
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op2
+  machine_time_share: 0.0
+  notes: Mark lot ID, place in bins.
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 10.0
+  time_unit: seconds
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 1.0
+- id: visual_check_id
+  name: Visual check + check ID
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 10.0
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op2
+  machine_time_share: 0.0
+  notes: Short check before staging.
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 10.0
+  time_unit: seconds
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 1.0
+- id: move_to_staging
+  name: Move cells to staging area
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 1.5
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op2
+  machine_time_share: 0.0
+  notes: Movement/logistics.
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 20.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_batch
+  time_value: 0.0
+  time_unit: seconds
+  batch_time_value: 30.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 1.0
+- id: weld_top_tabs
+  name: Weld top tabs
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 60.0
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op6
+  machine_time_share: 0.0
+  notes: Tabbing step.
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 20.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_batch
+  time_value: 0.0
+  time_unit: seconds
+  batch_time_value: 20.0
+  batch_time_unit: minutes
+  cells_per_array_for_step: 1.0
+- id: move_to_light_soak
+  name: Move cells to light soak
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 0.5
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op6
+  machine_time_share: 0.0
+  notes: Load into light soak area.
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 20.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_batch
+  time_value: 0.0
+  time_unit: seconds
+  batch_time_value: 10.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 1.0
+- id: light_soak_wait
+  name: Light soak (2 h wait)
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 0.0
+  setup_time_s_per_array: 0.0
+  operators: []
+  machine_time_share: 1.0
+  notes: Dwell; we will handle dwell vs labour later.
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 20.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_batch
+  time_value: 0.0
+  time_unit: seconds
+  batch_time_value: 0.0
+  batch_time_unit: minutes
+  cells_per_array_for_step: 1.0
+- id: remove_to_solar_sim
+  name: Remove cells and move to Solar sim
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 1.5
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op6
+  machine_time_share: 0.0
+  notes: Unload from light soak and move.
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 20.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_batch
+  time_value: 0.0
+  time_unit: seconds
+  batch_time_value: 30.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 1.0
+- id: measure_iv_el
+  name: Measure IV and take EL image
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 30.0
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op2
+  machine_time_share: 0.5
+  notes: Solar simulator + EL.
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 30.0
+  time_unit: seconds
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 1.0
+- id: write_post_tab
+  name: Write post tab PCE and Imax
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 20.0
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op2
+  machine_time_share: 0.0
+  notes: Data entry/logging.
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 20.0
+  time_unit: seconds
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 1.0
+- id: move_to_final_inspection
+  name: Move cells to final inspection area
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 0.5
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op2
+  machine_time_share: 1.0
+  notes: Movement/logistics.
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 20.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_batch
+  time_value: 0.0
+  time_unit: seconds
+  batch_time_value: 10.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 1.0
+- id: sort_by_imax
+  name: Sort cells by Imax
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 10.0
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op2
+  machine_time_share: 0.0
+  notes: Bin/sort cells.
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 10.0
+  time_unit: seconds
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 1.0
+- id: bypass_diode_fab
+  name: Bypass diode fabrication
+  level: diode
+  timing_basis: diode
+  time_per_unit_s: 75.0
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op3
+  machine_time_share: 0.0
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 0.8
+  entry_mode: per_unit
+  batch_units: 20.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_batch
+  time_value: 0.0
+  time_unit: seconds
+  batch_time_value: 20.0
+  batch_time_unit: minutes
+  cells_per_array_for_step: 1.0
+- id: test_bl_diodes
+  name: Perform test on BL diodes
+  level: diode
+  timing_basis: diode
+  time_per_unit_s: 9.0
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op3
+  machine_time_share: 0.5
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 20.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_batch
+  time_value: 0.0
+  time_unit: seconds
+  batch_time_value: 3.0
+  batch_time_unit: minutes
+  cells_per_array_for_step: 1.0
+- id: upload_pass_inventory
+  name: Upload pass no. to inventory
+  level: diode
+  timing_basis: diode
+  time_per_unit_s: 0.25
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op3
+  machine_time_share: 0.0
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 20.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_batch
+  time_value: 0.0
+  time_unit: seconds
+  batch_time_value: 5.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 1.0
+- id: place_passed_diodes_tray
+  name: Place all passed diodes on tray
+  level: diode
+  timing_basis: diode
+  time_per_unit_s: 0.1
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op3
+  machine_time_share: 0.0
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 20.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_batch
+  time_value: 0.0
+  time_unit: seconds
+  batch_time_value: 2.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 1.0
+- id: grab_cells_for_array
+  name: Grab stack of cells for array
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 0.9090909090909091
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op4
+  machine_time_share: 0.0
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 11.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_batch
+  time_value: 0.0
+  time_unit: seconds
+  batch_time_value: 10.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 1.0
+- id: scan_barcode_each_cell
+  name: Scan barcode of each cell
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 6.0
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op4
+  machine_time_share: 0.0
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 20.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_batch
+  time_value: 0.0
+  time_unit: seconds
+  batch_time_value: 2.0
+  batch_time_unit: minutes
+  cells_per_array_for_step: 1.0
+- id: sticky_note_array_stack
+  name: Place sticky note on array cell stack
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 20.0
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op4
+  machine_time_share: 0.0
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 20.0
+  time_unit: seconds
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 1.0
+- id: move_to_stringing
+  name: Move cell stack to stringing area
+  level: cell
+  timing_basis: cell
+  time_per_unit_s: 0.9090909090909091
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op4
+  machine_time_share: 1.0
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 11.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_batch
+  time_value: 0.0
+  time_unit: seconds
+  batch_time_value: 10.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 1.0
+- id: string_cells
+  name: String cells together
+  level: array
+  timing_basis: array
+  time_per_unit_s: 136.36363636363637
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op4
+  machine_time_share: 0.5
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 25.0
+  time_unit: minutes
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 11.0
+- id: add_blocking_diodes
+  name: Add blocking diodes
+  level: array
+  timing_basis: array
+  time_per_unit_s: 163.63636363636363
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op4
+  machine_time_share: 0.3
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 30.0
+  time_unit: minutes
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 11.0
+- id: check_damage_replace
+  name: Check for damage & replace if needed
+  level: array
+  timing_basis: array
+  time_per_unit_s: 5.454545454545454
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op4
+  machine_time_share: 0.0
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 60.0
+  time_unit: seconds
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 11.0
+- id: place_solar_sheet_shelf
+  name: Place solar sheet on shelf
+  level: array
+  timing_basis: array
+  time_per_unit_s: 0.9090909090909091
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op4
+  machine_time_share: 1.0
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 10.0
+  time_unit: seconds
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 11.0
+- id: prelam_el_test
+  name: Perform EL test on solar sheet
+  level: array
+  timing_basis: array
+  time_per_unit_s: 2.727272727272727
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op2
+  machine_time_share: 0.5
+  notes: Pre-lamination EL.
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 30.0
+  time_unit: seconds
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 11.0
+- id: move_to_lamination
+  name: Move sheet to lamination area
+  level: array
+  timing_basis: array
+  time_per_unit_s: 0.9090909090909091
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op5
+  machine_time_share: 1.0
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 10.0
+  time_unit: seconds
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 11.0
+- id: laminate_sheet
+  name: Laminate solar sheet
+  level: array
+  timing_basis: array
+  time_per_unit_s: 218.1818181818182
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op5
+  - operator_id: op2
+  machine_time_share: 0.9
+  notes: Press cycle; dwell vs labour to refine later.
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 40.0
+  time_unit: minutes
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 11.0
+- id: trim_lamination
+  name: Trim lamination to size
+  level: array
+  timing_basis: array
+  time_per_unit_s: 54.54545454545455
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op5
+  machine_time_share: 0.0
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 10.0
+  time_unit: minutes
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 11.0
+- id: weigh_sheet
+  name: Weigh solar sheet
+  level: array
+  timing_basis: array
+  time_per_unit_s: 5.454545454545454
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op5
+  machine_time_share: 0.0
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 60.0
+  time_unit: seconds
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 11.0
+- id: led_test
+  name: Test sheet under LED
+  level: array
+  timing_basis: array
+  time_per_unit_s: 2.727272727272727
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op2
+  machine_time_share: 0.5
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 30.0
+  time_unit: seconds
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 11.0
+- id: solar_sim_post_lam
+  name: Measure under solar sim (post-lam)
+  level: array
+  timing_basis: array
+  time_per_unit_s: 27.272727272727273
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op2
+  machine_time_share: 0.5
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 5.0
+  time_unit: minutes
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 11.0
+- id: move_to_framing
+  name: Move to framing area
+  level: array
+  timing_basis: array
+  time_per_unit_s: 0.9090909090909091
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op2
+  machine_time_share: 1.0
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 10.0
+  time_unit: seconds
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 11.0
+- id: frame_sheets
+  name: Frame solar sheets
+  level: array
+  timing_basis: array
+  time_per_unit_s: 10.909090909090908
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op1
+  machine_time_share: 0.3
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 2.0
+  time_unit: minutes
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 11.0
+- id: final_visual
+  name: Final visual inspection
+  level: array
+  timing_basis: array
+  time_per_unit_s: 81.81818181818181
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op1
+  machine_time_share: 0.0
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 15.0
+  time_unit: minutes
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 11.0
+- id: package_sheets
+  name: Package solar sheets
+  level: array
+  timing_basis: array
+  time_per_unit_s: 27.272727272727273
+  setup_time_s_per_array: 0.0
+  operators:
+  - operator_id: op1
+  machine_time_share: 0.0
+  notes: ''
+  batch_size: 1.0
+  items_per_array: 0.0
+  quantity_source: array
+  yield_fraction: 1.0
+  entry_mode: per_unit
+  batch_units: 1.0
+  batch_seconds: 0.0
+  timing_entry_mode: per_unit
+  time_value: 5.0
+  time_unit: minutes
+  batch_time_value: 0.0
+  batch_time_unit: seconds
+  cells_per_array_for_step: 11.0
